@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title>pop up prob</title>
+    <link rel="stylesheet" href="../wwwroot/lib/bootstrap/dist/css/bootstrap.css" />  
+    <link rel="stylesheet" href="../wwwroot/css/site.css" />
+    <script type="text/javascript" src="../wwwroot/lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="../wwwroot/js/site.js"></script>
+    <script language="javascript" type="text/javascript">
+        /*example from http://jsfiddle.net/y9w99/ */
+    /* this is namespace fn  */
+        (function ($) {
+            $.fn.ex = function () {
+                alert("from ex");
+            };
+
+            $.fn.invisible = function () {
+                return this.each(function () {
+                    $(this).css("visibility", "hidden");
+                });
+            };
+            //            $.fn.showpopup = function () {
+            //                alert("fn.showpopup");
+            //                var a = document.getElementById("outer");
+            //                //a.style.visibility = "visible";// this works
+            //                //a.setAttribute("visibility", "visible"); //??
+            //                                return this.each(function () {
+            //                                    //alert("inside fn.showpopup this.each" ); //+ $this.css("visibility")
+            //                                    //$(this).css("visibility", "visible");
+            //                                    this.style.visibility = "visible";
+            //                                });
+            //            };
+            $.fn.showpopup = function () {
+                $(".quickview").css("visibility", "visible"); //this works
+                //$(".content").css("visibility", "hidden");  //this works
+                //$(".content").css("border", "3px solid red"); //set border only for left and upper sides
+                $(".content").style.visibility = "hidden";   //don't work
+            }
+            $.fn.showpopup = function (contentId) {
+                $(contentId).css("visibility", "visible");
+                
+            }
+            $.fn.hidepopup = function () {
+                $(".quickview").css("visibility", "hidden");
+            };
+        } (jQuery));
+        $(document).ready(function () {
+            //alert("k ");
+            //$.fn.ex();
+            //call by id
+            $("firslink").click(function (event) {
+                alert("The div 'outer' will no longer take you to jquery.com");
+                //event.preventDefault();
+            });
+            //call by class content
+            $(".content").click(function (event) {
+                alert("The link will no longer take you to jquery.com");
+                event.preventDefault();
+            });
+
+            //https://learn.javascript.ru/mousemove-mouseover-mouseout-mouseenter-mouseleave 
+            // mouseover/mouseout will be react also if mouse will be over child element inside your parent.
+            // I think more convenient events pair is mouseenter/mouseleave
+            //            $(".content").mouseover(function () { 
+            //                $.fn.showpopup(); //$("#outer")
+            //                //alert("fff");
+            //                //                $("#log").append("<div>Handler for .mouseover() called.</div>");
+            //            });
+            //            $(".content").mouseout(function () {
+            //                $.fn.hidepopup();
+
+            //                        });
+            // mouseover/mouseout will be react also if mouse will be over child element inside your parent.
+            // more convenient events pair is mouseenter/mouseleave
+            // when page is loading popups are hided by .quickview class in site.css
+            //            $(".content").mouseenter(function () {
+            //                var mid = this.id;
+            //                alert(" mid is " + mid);
+            //                $.fn.showpopup();
+            //            });
+            $(".content").mouseleave(function () {
+                $.fn.hidepopup();
+            });
+            $(".content").hover(function (event) {
+                //alert("hover " + event.target.id);
+                console.log(event.target.id);
+                $("#firstimage").show();
+            });
+        });
+    </script>
+    
+   <style type="text/css">
+       /*css from http://jsfiddle.net/y9w99/ */
+       #shop{
+    background-repeat: repeat-x;    
+    height:121px;
+    width: 984px;
+    margin-left: 20px;
+    margin-top: 13px;
+}
+
+#shop .content{    
+    width: 182px; /*328 co je 1/3 - 20margin left*/
+    height: 121px;
+    line-height: 20px;
+    margin-top: 0px;
+    margin-left: 9px;
+    margin-right:0px;
+    display:inline-block;
+    position:relative;
+}
+
+#shop .content a {
+    position:absolute;
+    bottom:5px;
+    right:5px;
+    background:blue;
+    color:#FFF;
+}
+ /* / end of css from http://jsfiddle.net/y9w99/ */
+        
+    </style>
+
+</head>
+
+<body>
+<div id="shop">
+    <div  class="content">
+        <img id="firstimage" class="showquickview" alt="showhidden" src="http://placehold.it/182x121"/> 
+        <a id="firslink" class="quickview" href="#">Counter-Strike 1.6 Steam</a>
+    </div>
+    <div class="content">
+        <img class="showquickview" alt="showhidden" src="http://placehold.it/182x121"/> 
+        <a class="quickview" href="#">Counter-Strike 1.6 Steam</a>
+    </div>
+    <div class="content">
+        <img class="showquickview" alt="showhidden" src="http://placehold.it/182x121"/> 
+        <a class="quickview" href="#">Counter-Strike 1.6 Steam</a>
+    </div>
+    <div class="content">
+        <img class="showquickview" alt="showhidden" src="http://placehold.it/182x121"/> 
+        <a class="quickview" href="#">Counter-Strike 1.6 Steam</a>
+    </div>
+  </div>
+</body>
+</html>
+

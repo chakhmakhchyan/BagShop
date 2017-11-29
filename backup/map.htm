@@ -1,0 +1,100 @@
+﻿
+<!DOCTYPE html><!--https://kb.yoast.com/kb/generate-set-google-maps-browser-key/-->
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Control options</title>
+     <script type="text/javascript" src="../wwwroot/lib/jquery/dist/jquery.js" ></script>
+    <style type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+     #map_wrapper {
+    height: 400px;
+}
+
+#map_canvas {
+    width: 100%;
+    height: 100%;
+}
+    </style>
+  </head>
+  <body>
+    <div id="map_wrapper">
+    <div id="map_canvas" class="mapping"></div>
+</div>
+    <script type="text/javascript">
+        jQuery(function ($) {  // is the same as $(document).ready(function() { ... }) executes the given function when the DOM is ready
+            // Asynchronously Load the map API 
+            var script = document.createElement('script');
+            //script.src = "//maps.googleapis.com/maps/api/js?sensor=false&callback=initialize";
+            script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyD4iR9BCGp_LZTPQYhUXW3jQenq9Kx2dQ8&callback=initialize";
+            document.body.appendChild(script);
+        });
+
+        function initialize() {
+            var map;
+            var bounds = new google.maps.LatLngBounds();
+            var mapOptions = {
+                mapTypeId: 'roadmap'
+            };
+
+            // Display a map on the page
+            map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+            map.setTilt(45);
+
+            // Multiple Markers
+            var markers = [
+        ['7 Nikoghayos Tigranyan St, Yerevan', 40.2059002, 44.5178086],
+        ['Synopsys, Yerevan', 40.1553023, 44.5002454]
+    ];
+
+            // Info Window Content
+            var infoWindowContent = [
+        ['<div class="info_content">' +
+        '<h3>Արտադրահոսք</h3>' +
+        '<p>The London Eye is a giant Ferris wheel situated on the banks of the River Thames. The entire structure is 135 metres (443 ft) tall and the wheel has a diameter of 120 metres (394 ft).</p>' + '</div>'],
+        ['<div class="info_content">' +
+        '<h3>Palace of Westminster</h3>' +
+        '<p>The Palace of Westminster is the meeting place of the House of Commons and the House of Lords, the two houses of the Parliament of the United Kingdom. Commonly known as the Houses of Parliament after its tenants.</p>' +
+        '</div>']
+    ];
+
+            // Display multiple markers on a map
+            var infoWindow = new google.maps.InfoWindow(), marker, i;
+
+            // Loop through our array of markers & place each one on the map  
+            for (i = 0; i < markers.length; i++) {
+                var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+                bounds.extend(position);
+                marker = new google.maps.Marker({
+                    position: position,
+                    map: map,
+                    title: markers[i][0]
+                });
+
+                // Allow each marker to have an info window    
+                google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                    return function () {
+                        infoWindow.setContent(infoWindowContent[i][0]);
+                        infoWindow.open(map, marker);
+                    }
+                })(marker, i));
+
+                // Automatically center the map fitting all markers on the screen
+                map.fitBounds(bounds);
+            }
+
+            // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
+            var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function (event) {
+                this.setZoom(14);
+                google.maps.event.removeListener(boundsListener);
+            });
+
+        }
+
+    </script>
+   <!-- <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4iR9BCGp_LZTPQYhUXW3jQenq9Kx2dQ88&callback=initialize">-->
+  </body>
+</html>

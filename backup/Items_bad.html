@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Զամբյուղներ</title>
+    <link rel="stylesheet" href="../wwwroot/lib/bootstrap/dist/css/bootstrap.css" />  
+    <link rel="stylesheet" href="../wwwroot/css/site.css" />
+    <script type="text/javascript" src="../wwwroot/lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="../wwwroot/js/site.js"></script>
+   <style type="text/css">
+    
+.rowheight
+{
+    height:400px; /* This set images height and right side rows height 
+                    and simultaneosly column width to 450px appropriate to image sizes */
+}
+
+.enbanner
+{
+    top:-8px; left:70px; /* same class is in site.css but works for Bagshop.html*/
+}
+ 
+/*
+.firstcol img {       
+   height: 100%;   This will set <img> element in .parent div seamless (бесшовно) but in this case don't react to browser's scrolls
+   width: 100%;
+}*/
+</style>
+
+</head>
+<!--<header  style="" id="topmenu" class="navbar navbar-fixed-top">--><!--class="navbar navbar-inverse navbar-fixed-top"-->
+        <!--<div class="container navbar-fixed-top navbar-fixed-top">--><!--container navbar-fixed-top navbar-inverse navbar-fixed-top-->
+           <!-- <div class="navbar-header">
+                <a class="navbar-brand" href="BagShop.html">Գլխավոր</a>
+            </div>-->
+           <!-- <div class="itemsmainmenu" style="background-color:Aqua"><!--navbar-collapse collapse-->
+                    <!--<li><a href="am/BagShop.html">Home</a></li>-->
+                   <!--   <a style="padding-right:10px;" href="BagShop.html">Գլխավոր</a>
+                    <a style="padding-right:10px;href="Contact.html">Պատվիրել</a>
+                    <a style="font-size:x-small;" href="About.html">Մեր մասին</a>
+            </div>
+        </div>               
+</header>-->
+<body style="text-align:center">
+<!--navbar -->
+ <div id="emptyleftside" class="navbar-fixed-top"  style="background-color:#669900; width:15%; height:40px; float:left; border-right:1px solid #bbb;">
+                        &nbsp;
+  </div>
+  <div id="menucommands" class="navbar-fixed-top" style="left:15%; z-index:100; width:100%;">
+       <ul  class="topnav">
+        <li><a href="bagshop.html">Ձեռագործ Աշխարհ</a></li><!--style="color:Black;"-->
+        <li><a href="Bags.html">Պայուսակներ</a></li>
+        <li><a class="topnavactive" style="color:#111;">Զամբյուղներ</a></li>
+        <li><a href="kchuchikner.html">Զամբյուղիկներ</a></li>
+        <li><a href="blog.html">Խչոյի բլոգը</a></li>
+        <li><a href="About.html">Մեր մասին</a></li>
+       </ul> 
+   </div>
+   <!-- /navbar -->
+   <div id="flags" class="navbar-fixed-top"  style="display:inline-block; background-color:#669900;left:75%; width:200px;">
+               <a  href="BagShop.html" title="Հայերեն" class="amtext flgtext flgtexthover">Հայերեն  <!--relativepos flagtext amflagtext-->           
+                         <!--href="../am/BagShop.html" style="text-decoration:none;">-->
+                            <img class="relativepos ambanner" border="0" alt="Armenian" src="../wwwroot/languages/am.png" width="30"
+                             height="15"style="position:relative; text-decoration:none;top:12px;left:-35px;"/>
+                        </a>
+              <!-- </div>-->
+                <a href="../ru/BagShop.html" title="Русский" class="flgtext rutext flgtexthover">Русский
+                    <!--<a href="../ru/BagShop.html" style="text-decoration:none;">-->
+                    <img class="relativepos rubanner" alt="Русский" src="../wwwroot/languages/RU.png" width="30" height="15"/>
+                </a> 
+                <a href="../en/BagShop.html" title="English" class="relativepos flgtext entext flgtexthover">English<!--class=" flagtext enflagtext"-->
+                    <!--<a href="../en/BagShop.html">-->
+                    <img class="relativepos enbanner" border="0" alt="English" src="../wwwroot/languages/gb.png" width="30" height="15"/>
+                </a>
+           </div>
+<div id="ItemsCaption" style="background-color:#fff; text-align: center;  width:100%; padding-top:20px; padding-bottom:10px;"><h3><strong>Զամբյուղներ</strong></h3></div>
+
+   <!-- Content-->
+    <div id="firstcol"  style="float:left; margin-left:25%;  background-color:#ff0;"><!--#efefef"class="showquickview"-->
+       <!--  Left  Set Div for first column -->
+     <!--<div></div>-->
+       <!--<!--<div class="showquickview">-->
+            <img id="Img1row1" class="rowheight showquickview"  src="../wwwroot/images/Collections/baskets/IMG_5570.JPG" alt="Collection 1 img 1"/><br>
+            <button id="btnImg1" class="quickview" style="width:10px;  position:relative; height:10px; left:10px;">Արագ դիտում</button>
+       <!--</div><br>-->
+       <img id="Img2row2"  class="rowheight margintop02em" src="../wwwroot/images/Collections/baskets/IMG_5588.JPG" alt="Collection 1 img 2"/><br>
+       <img id="Img3row3"  class="rowheight margintop02em" src="../wwwroot/images/Collections/baskets/IMG_5589.JPG" alt="Collection 1 img 3"/><br>
+       <img id="Img4row4"  class="rowheight margintop02em" src="../wwwroot/images/Collections/baskets/IMG_5579.JPG" alt="Collection 1 img 4"/><br>
+       <img id="Img5row5"  class="rowheight margintop02em marginbottom2em" src="../wwwroot/images/Collections/baskets/IMG_5610.JPG" alt="Collection 1 img 4"/><br>
+      <!-- <button type="button"  title="Արագ դիտում" class="collectioncaption quickview" onclick="OpenInNewTab('Items.html');">Արագ դիտում</button>-->
+    </div>
+    <div id="secondcol" style="float:left; width:20%; margin-left:10px;">
+        <!--Right   Set Div As your requirement -->
+        
+        <section id="row1" class="rowheight padding5prs" style="background-color:#eee; text-align:left;">
+            <p class="fontbold">Զամբյուղներ</p>
+            <p class="marginzero">Նորույթ: Գործածական Զամբյուղ</p> 
+            <p style="margin:0% 0% 1em 0%"> <!--margin bottom-->
+                20 000 <img class="dramimgforitems" src="../wwwroot/images/General/10px_dram.png" alt="dram" />
+            </p>
+            <p style="font-size:smaller">
+                Դուք կարող եք պատվիրել զամբյուղները ձեր նախնտրած գույների համադրությամբ և գրարումներով 
+            </p>
+            <p style="font-size:small">
+                Պատվիրելու համար զանգահարեկ (+374)94 592121  կամ (+374)94 592121 <br /> հեռախոսահամարներով
+            </p>
+           
+        </section>
+
+        <section id="row2" class="rowheight margintop02em padding5prs"   style="background-color:#eee;  text-align:left;">
+            <p class="fontbold">Զամբյուղներ</p>
+            <p class="marginzero">Նորույթ: Գործածական Զամբյուղ</p> 
+            <p style="margin:0% 0% 1em 0%">
+                20 000 <img class="dramimgforitems" src="../wwwroot/images/General/10px_dram.png" style="height:0.7em; width:0.7em;" alt="dram" />
+            </p>
+            <p style="font-size:smaller">
+                Դուք կարող եք պատվիրել զամբյուղները ձեր նախնտրած գույների համադրությամբ և գրարումներով 
+            </p>
+            <p style="font-size:smaller">
+                Պատվիրելու համար զանգահարեկ (+374)94 592121  կամ (+374)94 592121 <br /> հեռախոսահամարներով
+            </p>
+            
+        </section>
+
+        <section id="row3" class="rowheight margintop02em padding5prs"   style="background-color:#eee; text-align:left;">
+            <p class="fontbold">Զամբյուղներ</p>
+            <p class="marginzero">Նորույթ: Գործածական Զամբյուղ</p> 
+            <p style="margin:0% 0% 1em 0%">
+                20 000 <img class="dramimgforitems" src="../wwwroot/images/General/10px_dram.png" style="height:0.7em; width:0.7em;" alt="dram" />
+            </p>
+            <p style="font-size:smaller">
+                Դուք կարող եք պատվիրել զամբյուղները ձեր նախնտրած գույների համադրությամբ և գրարումներով 
+            </p>
+            <p style="font-size:smaller">
+                Պատվիրելու համար զանգահարեկ (+374)94 592121  կամ (+374)94 592121 <br /> հեռախոսահամարներով
+            </p>
+          
+        </section>
+
+        <section id="row4" class="rowheight margintop02em padding5prs"   style="background-color:#eee; text-align:left;">
+            <p class="fontbold">Զամբյուղներ</p>
+            <p class="marginzero">Նորույթ: Գործածական Զամբյուղ</p> 
+            <p style="margin:0% 0% 1em 0%">
+                20 000 <img class="dramimgforitems" src="../wwwroot/images/General/10px_dram.png" style="height:0.7em; width:0.7em;" alt="dram" />
+            </p>
+            <p style="font-size:smaller">
+                Դուք կարող եք պատվիրել զամբյուղները ձեր նախնտրած գույների համադրությամբ և գրարումներով 
+            </p>
+            <p style="font-size:smaller">
+                Պատվիրելու համար զանգահարեկ (+374)94 592121  կամ (+374)94 592121 <br /> հեռախոսահամարներով
+            </p>
+            
+        </section>
+
+         <section id="row5" class="rowheight margintop02em padding5prs"   style="background-color:#eee; text-align:left;">
+            <p class="fontbold">Զամբյուղներ</p>
+            <p class="marginzero">Նորույթ: Գործածական Զամբյուղ</p> 
+            <p style="margin:0% 0% 1em 0%">
+                20 000 <img class="dramimgforitems" src="../wwwroot/images/General/10px_dram.png" style="height:0.7em; width:0.7em;" alt="dram" />
+            </p>
+            <p style="font-size:smaller">
+                Դուք կարող եք պատվիրել զամբյուղները ձեր նախնտրած գույների համադրությամբ և գրարումներով 
+            </p>
+            <p style="font-size:smaller">
+                Պատվիրելու համար զանգահարեկ (+374)94 592121  կամ (+374)94 592121 <br /> հեռախոսահամարներով
+            </p>
+          
+        </section>
+    </div> <!--end second column-->
+
+            <script language="javascript" type="text/javascript">
+                //        jQuery(function ($){
+                //            alert("ddddd");
+                //            $('#loading').hide();
+                //        });
+                $(window).load(function () {
+                    //alert("window.load");
+                    $('#loading').hide();
+                    //$('#topmenu').hide(); // this way can hide menu but after loading
+
+                });
+            </script>
+</body>
+ <div id="loading">
+    <img id="loading-image" class="loading-page" src="../wwwroot/images/Loaders/fourspots.gif" alt="Loading..." />
+  </div>
+</html>

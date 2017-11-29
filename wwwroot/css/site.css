@@ -1,0 +1,266 @@
+﻿body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+.relativepos
+{
+    position:relative;
+}
+.marginzero
+{ 
+    margin: 0;/* to reduce p line distance */
+}
+.margintop02em
+{
+   margin:0.2em 0 0 0;
+}
+.marginbottom2em
+{
+   margin-bottom: 2em;
+}
+.padding5prs
+{
+    padding:5%; 
+}
+.fontbold
+{
+    font-weight: bold;
+}
+
+.dramimgforitems
+{
+    height:0.7em; width:0.7em; position:relative; top:-0.1em;
+}
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+/* Big shop's added styles*/
+.cursorpointer
+{
+    cursor:pointer;
+}
+.carousel-title {
+  position: absolute;
+  right: 15%;
+  bottom: 150px;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+  font-size:50px;
+}
+/* Carousel */
+.collectioncaption p 
+{
+  position: absolute;
+  right: 15%;
+  bottom: 50px;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+  font-size: 20px;
+  line-height: 1.4;
+ }
+
+.navbar-inverse{
+    height:50px;
+}
+
+#loading { /* when class is declared in img tag 
+    this don't work */
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   position: fixed;
+   display: block;
+   opacity: 1;
+   background-color: #fff;
+   z-index: 99;
+   text-align: center;
+}
+.loading-page {
+  position:relative;
+  top: 50%;
+  left: 0%;
+  z-index: 100;
+  width:100px;
+  height:80px;
+  opacity: 1;
+}
+.loading-image {
+  position: absolute;
+  top: 100px;
+  left: 240px;
+  z-index: 100;
+}
+/*.mylink {
+    text-decoration: none;
+} don't work ???*/ 
+
+.caruselimgsize 
+{
+    width:auto;
+    height:50%;
+}
+.marker_mesbox_caption 
+{
+    font-size:8px;
+    font-weight:bold;
+}    
+.marker_mesbox_text
+{
+    font-weight:normal;
+}   
+.quickview
+{
+    /*border-radius: 10px;*/
+    border: 1px solid #000;
+    width:300px;
+    height:50px;
+    /*text-shadow: right, down, diffusiness, color*/
+    /*text-shadow:1px 1px 2px black, 0 0 25px white, 0 0 5px darkblue;*/
+    background-color:#fff;
+    color:Black;
+   /*display:none;*/
+   visibility:hidden;
+}
+.showquickview:hover .quickview {
+    visibility:visible;
+}
+
+.mycol-md-3
+{
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;  
+}
+/* Hide/rearrange for smaller screens  https://www.w3schools.com/cssref/css3_pr_mediaquery.asp*/
+/*"If [device width] is less than or equal to 480px, then do {...}"*/
+ @media screen and (max-width: 480px) {
+    .collectioncaption p{
+        font-size: 10px;
+        line-height:1;
+        bottom: 10px;
+    }
+  }
+ /* "If [device width] is greater than or equal to 650px, then do {...}"*/
+@media (min-width: 650px) {
+  .mycol-md-3  {
+    float: left;
+  }
+}/**/
+/* copy from bootstrap.css
+.col-md-3
+{
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 992px) {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left;
+  }
+.col-md-3 {
+    width: 25%;
+  }
+*/
+    /*menu*/
+    .topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#669900;
+    height:40px;
+    }
+
+    .topnav li {
+        float: left;
+        border-right:1px solid #bbb;
+    }
+
+    .topnav li:last-child {
+        border-right: 1px solid #bbb;
+    }
+
+.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+.topnav li a:hover:not(.topnavactive) {
+    background-color: #558000;
+   
+}
+
+.topnavactive {
+    background-color: #fff;
+     color:#111; /* don't work, set in page */	 
+}
+    /*/menu*/                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+    /*flags*/
+    .flgtext
+    {
+        padding:0px;
+        font-size:xx-small;
+        text-decoration:none;
+        position:relative;
+        color:#fff;
+    }
+    a.flgtexthover:hover, a.flgtexthover:active {color:White; text-decoration:none;}
+    
+    .amtext
+    {
+        top:-1px; 
+    /*padding: 0px;font-size:xx-small;
+     text-decoration:none; from css don't affect */
+    }
+    .ambanner
+    {
+        left:3px;
+    }
+    .enbanner
+    {
+         top:-8px; left:140px;
+    }
+    .entext
+    {
+         top:-1px;left:-2px;
+    }
+    .rutext
+    {
+       top:-1px;  
+    }
+    .rubanner
+    {
+        top:12px;left:-35px;
+    }
+    /*/flags*/

@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <!--<meta name="viewport" content="initial-scale=1.0, user-scalable=no">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--https://www.w3schools.com/css/css_rwd_viewport.asp-->
+    <meta charset="utf-8">
+    <title>Ձեռագործ Աշխարհ</title>
+     <link rel="stylesheet" href="../wwwroot/lib/bootstrap/dist/css/bootstrap.css" />  
+     <link rel="stylesheet" href="../wwwroot/css/site.css" />
+     <!--<script type="text/javascript" src="../wwwroot/lib/bootstrap/dist/js/bootstrap.js" ></script>-->
+     <script type="text/javascript" src="../wwwroot/lib/jquery/dist/jquery.js"></script>
+     <script type="text/javascript" src="../wwwroot/js/site.js"></script>
+    <style type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+     #map_wrapper {
+        height: 400px;
+     }
+     #map_canvas {
+        width: 30%;
+        height: 30%;
+     }
+    </style>
+  </head>
+  <body><!--navbar -->
+  <!--<header id="topmenu" style="z-index:100;"  class="navbar-fixed-top">-->
+  <div id="emptyleftside" class="navbar-fixed-top"  style="background-color:#669900; width:15%; height:40px; float:left; border-right:1px solid #bbb;">
+                        &nbsp;
+  </div>
+  <div id="menucommands" class="navbar-fixed-top" style="left:15%; z-index:100; width:100%;">
+       <ul  class="topnav">
+        <li><a class="topnavactive" style="color:Black;">Ձեռագործ Աշխարհ</a></li>
+        <li><a href="Bags.html">Պայուսակներ</a></li>
+        <li><a href="Items.html">Զամբյուղներ</a></li>
+        <li><a href="kchuchikner.html">Զամբյուղիկներ</a></li>
+        <li><a href="blog.html">Խչոյի բլոգը</a></li>
+        <li><a href="About.html">Մեր մասին</a></li>
+       </ul> 
+   </div>
+<div id="flags" class="navbar-fixed-top"  style="display:inline-block; background-color:#669900;left:75%; width:200px;">
+               <a  href="BagShop.html" title="Հայերեն" class="amtext flgtext flgtexthover">Հայերեն         
+                     <img class="relativepos ambanner" border="0" alt="Armenian" src="../wwwroot/languages/am.png" width="30"
+                         height="15"style="position:relative; text-decoration:none;top:12px;left:-35px;"/>
+               </a>
+               <a href="../ru/BagShop.html" title="Русский" class="flgtext rutext flgtexthover">Русский
+                    <img class="relativepos rubanner" alt="Русский" src="../wwwroot/languages/RU.png" width="30" height="15"/>
+               </a> 
+               <a href="../en/BagShop.html" title="English" class="relativepos flgtext entext flgtexthover">English<!--class=" flagtext enflagtext"-->
+                    <img class="relativepos enbanner" border="0" alt="English" src="../wwwroot/languages/gb.png" width="30" height="15"/>
+               </a>
+</div>
+
+<div id="HomeCaption" style="background-color:#fff; text-align: center;  width:100%; padding-top:20px; padding-bottom:10px;"><h3><strong>Ձեռագործ Աշխարհ</strong></h3></div>
+
+<!--</header>-->
+
+
+<div class="container body-content">
+        
+<div id="myCarousel" style="position:relative; top:0px;" class="carousel slide"  data-ride="carousel" data-interval="6000"><!--style="position:relative; left:15px;"-->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+   <!-- first image-->
+       <div class="item active cursorpointer" onclick="OpenInNewTab('Bags.html');">
+            <img title="Մանրամասն" src="../wwwroot/images/IMG_5614.JPG" alt="ASP.NET" class="img-responsive" /><!-- caruselimgsizestyle="height:700px;"-->
+            <div id="caruselTitle"  z-index="100" class="carousel-title">
+                ԶԱՄԲՅՈՒՂՆԵՐ ԵՎ ՊԱՅՈՒՍԱԿՆԵՐ
+        </div>
+        <div class="collectioncaption">
+            <p><!--btn btn-default -->
+                Welcome to pretty world of manual baskets and bags.
+                <!-- <button type="button" title="Մանրամասն" class="collectioncaption detailsbtn" onclick="OpenInNewTab('Items.html');">Ավելին</button>-->
+                </p>
+        </div>
+        </div>
+     <!-- second image -->   
+        <div class="item cursorpointer" onclick="OpenInNewTab('Items.html');">
+            <img class="caruselimgsize" src="../wwwroot/images/IMAG0982.jpg" alt="Visual Studio"/>
+            <div class="collectioncaption" role="option">
+                <p>
+                    Use cutting edge fashion bags.
+                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+        <!-- third image -->   
+        <div class="item cursorpointer" onclick="OpenInNewTab('kchuchikner.html');">
+            <img class="caruselimgsize img-responsive" src="../wwwroot/images/IMAG1200.jpg" alt="Package Management"  />
+            <div class="carousel-caption" role="option">
+                <p>
+                    Little sexy bags for your intime things.
+                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525029&clcid=0x409">
+                        Learn More
+                    </a>
+                </p>
+            </div>
+        </div>
+        <!-- fourth image -->   
+        <div class="item cursorpointer" onclick="OpenInNewTab('kchuchikner.html');">
+            <img class="caruselimgsize" src="../wwwroot/images/IMAG1177.jpg" alt="Microsoft Azure" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    Collections for save your accesories.
+                    <!--<a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
+                        Learn More
+                    </a>-->
+                </p>
+            </div>
+        </div>
+        <!-- fifth image -->
+        <div class="item">
+            <img class="caruselimgsize" src="../wwwroot/images/IMAG0928.jpg" alt="Microsoft Azure" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    Exellent collection for young girls and styling ledies
+                   <!-- <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
+                        Learn More
+                    </a>-->
+                </p>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+</div><!--/container-->
+
+<!--<div style="margin-right: -15px;  margin-left: +415px;">
+    <div id="map" style="height:300px; width:300px;">
+    </div>
+    
+</div>
+-->
+    <!--</div style="margin-right: -15px;  margin-left: +415px;">-->
+     <hr style="border: 1px solid #ddd;position:relative; top: -15px;"/><!-- /-->
+    <div id="map_wrapper" class="row" style="text-align:center;position:relative; top:-30px;"> <!--style="background-color:Aqua;margin-right: -15px; margin-left: 15px;" -->
+            <div id="firstcolumn" class="mycol-md-3" style="width:30%; min-width:300px;"><!--  style="width:30%;"-->
+                <p style="font-size:20px; font-weight:900;">Պատվիրել</p>
+                <ul>
+                    <li>Զանգահարեկ հետևյալ հեռախոսահամարներով:</li>
+                    <li>Այցելեկ Սինոպսիս Երևան գլխամասային արտադրամասը </li>
+                    <li>կամ Կոմիտասի մասնաճյուղը </li>
+                    <li>կամ զանգահարեկ +374 94 361151</li>
+                    <li>Մանրամասները իմանալու համար տեղադրեկ կամ կտտացրեկ քարտեզի նշանների վրա:</li>
+                </ul>
+            </div>
+            <div id="map_canvas" class="mycol-md-3" style="height:100%; width:30%; min-width:300px;"></div>
+            <div ><!--class="mycol-md-3" -->
+                <p style="font-size:20px; font-weight:900;">Ընդունվում են Պատվերներ Օնլայն Խանութների և ցանկացած կայքերի համար</p>
+                <ul>
+                    <li>Զանգահարեկ +374 93 201204</li>
+                    <li>կամ Կոմիտասի մասնաճյուղը </li>
+                    <li>կամ զանգահարեկ +374 94 361151</li>
+                    <li>Մանրամասները իմանալու համար տեղադրեկ կամ կտտացրեկ քարտեզի նշանների վրա:</li>
+                </ul>
+            </div>
+    </div>
+        <hr />
+        <footer>
+            <p>&copy; 2017 - BagShop</p>
+        </footer>
+    
+    <script type="text/javascript">
+        jQuery(function ($) {  // is the same as $(document).ready(function() { ... }) executes the given function when the DOM is ready
+            // Asynchronously Load the map API 
+            var script = document.createElement('script');
+            //script.src = "//maps.googleapis.com/maps/api/js?sensor=false&callback=initialize";
+            script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyD4iR9BCGp_LZTPQYhUXW3jQenq9Kx2dQ8&callback=initialize";
+            document.body.appendChild(script);
+        });
+
+        function initialize() {
+            var map;
+            var bounds = new google.maps.LatLngBounds();
+//            var mapOptions = {
+//                mapTypeId: 'roadmap'
+//            };
+
+            // Display a map on the page
+            map = new google.maps.Map(document.getElementById("map_canvas"), {
+                //zoom: 14,
+                mapTypeControl: true,
+                mapTypeControlOptions: {
+                    style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+                    mapTypeIds: ['roadmap', 'terrain']
+                }   
+           });                    //, mapOptions);
+           // map.setTilt(45);
+
+            // Multiple Markers
+            var markers = [
+        ['Ն. Տիգրանյան 7 բն. 8 հեռ. 094 341151' , 40.2059002, 44.5178086],
+        ['Սինոպսիս, Երեվան', 40.1553023, 44.5002454]
+    ];
+
+            // Info Window Content
+            var infoWindowContent = [
+        ['<div class="marker_mesbox_caption">' +  //class="info_content"
+        'Արտադրամաս' +
+        '<p class="marker_mesbox_text">Հեռախոս: 223322223 Հասցե: Ն.Տիգրանյան 7 բն. 8</p>' + '</div>'],
+        ['<div class="marker_mesbox_caption">' + //"info_content"
+        'Սինոպսիս Երեվան' +
+        '<p class="marker_mesbox_text">Սինոպսիս Արմենիա. Լավագուն պայուսակների արտադրամաս: Հասցե - Արշակունյաց </p>' +
+        '</div>']
+    ];
+
+            // Display multiple markers on a map
+            var infoWindow = new google.maps.InfoWindow(), marker, i;
+
+            // Loop through our array of markers & place each one on the map  
+            for (i = 0; i < markers.length; i++) {
+                var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+                bounds.extend(position);
+                marker = new google.maps.Marker({
+                    position: position,
+                    map: map,
+                    title: markers[i][0]
+                });
+
+                // Allow each marker to have an info window    
+                google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                    return function () {
+                        infoWindow.setContent(infoWindowContent[i][0]);
+                        infoWindow.open(map, marker);
+                    }
+                })(marker, i));
+
+                // Automatically center the map fitting all markers on the screen
+                map.fitBounds(bounds);
+            }
+
+            // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
+            var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function (event) {
+                //alert("bound_changed");
+                this.setZoom(11);
+                google.maps.event.removeListener(boundsListener);
+            });
+
+        }
+    </script>
+  
+   <!-- <script type="text/javascript" src="../wwwroot/lib/jquery/dist/jquery.js"></script>-->
+    <script type="text/javascript" src="../wwwroot/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script language="javascript" type="text/javascript">
+        $(window).load(function () {
+            $('#loading').hide();
+            //$('#topmenu').hide(); // this way can hide menu but after loading
+
+        });
+    </script>
+  </body>
+  <div id="loading">
+    <img id="loading-image" class="loading-page" src="../wwwroot/images/Loaders/fourspots.gif" alt="Loading..." />
+  </div>
+</html>

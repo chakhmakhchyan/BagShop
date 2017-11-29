@@ -1,0 +1,128 @@
+﻿<!DOCTYPE>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--https://www.w3schools.com/css/css_rwd_viewport.asp-->
+    <meta charset="utf-8">
+    <title>Բլոգ</title>
+     <link rel="stylesheet" href="../wwwroot/lib/bootstrap/dist/css/bootstrap.css" />  
+     <link rel="stylesheet" href="../wwwroot/css/site.css" />
+     <script type="text/javascript" src="../wwwroot/lib/jquery/dist/jquery.js"></script>
+     <script type="text/javascript" src="../wwwroot/js/site.js"></script>
+     <style type="text/css">
+        .commentleftposition
+        {
+            left:20%;
+        }
+        /* for flags positions */
+        .amtext
+        {
+            top:+4px; 
+        }
+        .rutext
+        {
+           top:+4px;  
+        }
+        .entext
+        {
+             top:+4px;left:-2px;
+        }
+        .enbanner
+        {
+             top:-4px; left:140px;
+        }
+     </style>
+</head>
+<body>
+<!--navbar and header-->
+<div id="emptyleftside" class="navbar-fixed-top"  style="background-color:#669900; width:15%; height:40px; float:left; border-right:1px solid #bbb;">
+                        &nbsp;
+  </div>
+  <div id="menucommands" class="navbar-fixed-top" style="left:15%; z-index:100; width:100%;">
+       <ul  class="topnav">
+        <li><a href="BagShop.html">Ձեռագործ Աշխարհ</a></li>
+        <li><a href="Bags.html">Պայուսակներ</a></li>
+        <li><a href="Items.html">Զամբյուղներ</a></li>
+        <li><a href="kchuchikner.html">Զամբյուղիկներ</a></li>
+        <li><a href="blog.html">Խչոյի բլոգը</a></li>
+        <li><a class="topnavactive" style="color:Black;">Մեր մասին</a></li>
+       </ul> 
+   </div>
+<div id="flags" class="navbar-fixed-top"  style="display:inline-block; background-color:#669900;left:75%; width:200px;">
+               <a  href="BagShop.html" title="Հայերեն" class="amtext flgtext flgtexthover">Հայերեն  <!--relativepos flagtext amflagtext-->           
+                         <!--href="../am/BagShop.html" style="text-decoration:none;">-->
+                            <img class="relativepos ambanner" border="0" alt="Armenian" src="../wwwroot/languages/am.png" width="30"
+                             height="15"style="position:relative; text-decoration:none;top:12px;left:-35px;"/>
+                        </a>
+              <!-- </div>-->
+                <a href="../ru/BagShop.html" title="Русский" class="flgtext rutext flgtexthover">Русский
+                    <!--<a href="../ru/BagShop.html" style="text-decoration:none;">-->
+                    <img class="relativepos rubanner" alt="Русский" src="../wwwroot/languages/RU.png" width="30" height="15"/>
+                </a> 
+                <a href="../en/BagShop.html" title="English" class="relativepos flgtext entext flgtexthover">English<!--class=" flagtext enflagtext"-->
+                    <!--<a href="../en/BagShop.html">-->
+                    <img class="relativepos enbanner" border="0" alt="English" src="../wwwroot/languages/gb.png" width="30" height="15"/>
+                </a>
+</div>
+
+<div id=՞AboutCaption" style="background-color:#fff; text-align: center;  width:100%; padding-top:20px; padding-bottom:10px;"><h3><strong>Մեր մասին</strong></h3></div>
+
+<!--</header>-->
+
+<!--navbar and header-->
+    <div id="video" style="text-align:center">
+        <video style="text-align:center" width="400" controls>
+            <source  src="../wwwroot/Videos/amxchosspeach.mp4" type="video/mp4">
+     
+        </video>
+    </div>
+  
+    <div  id="existingcomments"class="relativepos commentleftposition" style="width:60%;">
+        <h3 style="font-weight:bold; ">Մեկնաբանություններ</h3>
+        <div id="comment1"  style="font-weight:bold; background-color:Yellow;">&nbsp;&nbsp;
+           <img width="16" src="../wwwroot/blog/msg_kudos.gif" alt="great" /> <span style="font-weight:bold;">Graet</span>  
+           <img width="16" class="relativepos commentleftposition" src="../wwwroot/blog/icn-member-16.gif" alt="user" />
+           <span class="relativepos commentleftposition" style="font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;Gayane Kamavosyan</span>  
+           <span style="float:right">Sent 14 Nov 17</span>
+           <p>&nbsp;</p>
+           <div style="text-align:center;">
+                <img width="200" src="../wwwroot/blog/commentgajush.jpg" alt="Gayane comment" />
+                <!--<span class="relativepos" style="font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;Ինչ Ճիշտ խոսք Է</span>-->
+            </div>
+            <br>
+      
+
+        </div>
+        <p>&nbsp;</p>
+        <span class="relativepos" style="font-size:15; font-weight:bold;left:200;">Նոր Մեկնաբանություն</span>
+<p>&nbsp;</p>
+      <form style="text-align:center;" action="/action_page.php" id="usrform">
+        Name: <input type="text" name="usrname">
+            <input type="submit">
+      
+<br>
+    <textarea rows="4" cols="50" name="comment" form="usrform">
+        Մուտքագրել այստեղ...
+    </textarea>
+    </form>
+<p><b>Note:</b> The form attribute is not supported in IE.</p>
+     </div>
+ </section>
+      <script language="javascript" type="text/javascript">
+          //        jQuery(function ($){
+          //            alert("ddddd");
+          //            $('#loading').hide();
+          //        });
+          $(window).load(function () {
+              //alert("window.load");
+              $('#loading').hide();
+              //$('#topmenu').hide(); // this way can hide menu but after loading
+
+          });
+    </script> 
+  </body>
+   <div id="loading">
+    <img id="loading-image" class="loading-page" src="../wwwroot/images/Loaders/fourspots.gif" alt="Loading..." />
+  </div>
+</html>
+
